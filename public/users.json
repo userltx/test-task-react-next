@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "login": "andreyYeti",
+      "password": "12345678",
+      "name": "Андрей"
+    },
+    {
+      "id": 2,
+      "login": "mariaKoala",
+      "password": "Maria1988",
+      "name": "Мария"
+    },
+    {
+      "id": 3,
+      "login": "ilyaNimonov",
+      "password": "password",
+      "name": "Илья"
+    }
+  ]
+  
