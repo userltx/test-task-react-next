@@ -14,6 +14,7 @@ export const CardImage: React.FC<CardImageProp> = ({image}) => {
     rounded-full 
     flex 
     justify-center 
+    items-center
     w-[72px]
     h-[72px]
     bg-danger'>

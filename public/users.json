@@ -2,7 +2,7 @@
     {
       "id": 1,
       "login": "andreyYeti",
-      "password": "12345678",
+      "password": "Pa12345678",
       "name": "Андрей"
     },
     {
@@ -14,7 +14,7 @@
     {
       "id": 3,
       "login": "ilyaNimonov",
-      "password": "password",
+      "password": "Password1",
       "name": "Илья"
     }
   ]
