@@ -1,3 +1,4 @@
+import { useRouter } from "next/navigation"
 import { useAuth } from "../context/AuthContext"
 import { Button } from "./Button"
 import Input from "./Input"
@@ -20,6 +21,7 @@ const Modal: React.FC<ModalProps> = ({isActive, setIsActive}) => {
   const [password, setPassword] = useState<string>("");
   const [users, setUsers] = useState<UserType[]>([])
   const [error, setError] = useState<string>("")
+  const router = useRouter();
   const {loginUser} = useAuth()
 
   useEffect(() => {
@@ -46,8 +48,8 @@ const Modal: React.FC<ModalProps> = ({isActive, setIsActive}) => {
       return u.login === login && u.password === password 
     })
     if (user) {
-      
       loginUser(user.name)
+      router.push('/profile')
       setIsActive(false)
     }
     else {

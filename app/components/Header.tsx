@@ -25,6 +25,20 @@ export const Header = () => {
             />
             </Link>
         <nav className="flex justify-center place-items-center">
+            {user && <Link 
+                className="text-secondText
+                tracking-[0.2px]
+                leading-[24px]
+                font-semibold 
+                text-[15px] 
+                mr-[59px]
+                font-open_sans 
+                max-custommd:mr-[40px]
+                max-sm:mr-[10px]
+                "
+                href="/profile">
+                Профиль
+            </Link>}
             <Link 
                 className="text-secondText
                 tracking-[0.2px]

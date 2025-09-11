@@ -5,9 +5,11 @@ import { Button } from "../components/Button";
 import {useState} from 'react'
 import { Cards } from "../components/Cards";
 import Modal from "../components/Modal";
+import { useAuth } from "../context/AuthContext";
 
 export default function MainHome() {
   const [isActive, setIsActive] = useState<boolean>(false)
+  const {logout, user} = useAuth()
   const router = useRouter();
   return (
     <div className="font-mont mt-[97px] max-customlg:mt-[67px] max-sm:mt-[57px]">
@@ -22,7 +24,18 @@ export default function MainHome() {
         Место для получения медицинской помощи
       </h1>
       <div className="flex space-x-[11px] mb-[96px] max-customlg:mb-[66px] max-customsm:mb-[30px]">
-        <Button onClick={() => setIsActive(true)} typeBtn="fillBg" >Войти</Button>
+        <Button 
+        onClick={() => {
+          if (user) {
+            logout()
+          }
+          else {
+            setIsActive(true)
+          }
+        }} 
+        typeBtn="fillBg">
+        {user ? "Выйти" : "Войти"}
+        </Button>
         <Button onClick={() => router.push('/contacts')} typeBtn="emptyBg">Контакты</Button>
       </div>
       <Cards />
