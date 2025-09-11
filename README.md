@@ -1,3 +1,6 @@
+Выложил два разных варианта реализации профиля. 
+На ветке master представлена возможность перехода к профилю в виде компонента, а на v2-profile-handling переход происходит как к отдельному окну с защитой от входа неавторизованного пользователя.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
